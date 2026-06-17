@@ -290,7 +290,7 @@ h3 {
 h1 {
   max-width: 620px;
   color: var(--paper-strong);
-  font-size: 7rem;
+  font-size: 7.28rem;
   text-shadow:
     0 4px 0 var(--red-dark),
     0 13px 28px rgba(0, 0, 0, 0.46);
@@ -592,7 +592,7 @@ section[id] {
 .specials-copy h2,
 .visit-copy h2 {
   color: var(--ink);
-  font-size: 4.6rem;
+  font-size: 4.78rem;
 }
 
 .section-heading p,
@@ -946,15 +946,12 @@ section[id] {
 }
 
 .proof-inner {
-  display: grid;
-  grid-template-columns: minmax(280px, 0.84fr) minmax(420px, 1.16fr);
-  gap: 38px;
-  align-items: center;
+  display: block;
 }
 
 .proof-section .section-heading h2 {
   color: var(--paper-strong);
-  font-size: 4.2rem;
+  font-size: 4.44rem;
   text-shadow: 0 3px 0 var(--red-dark);
 }
 
@@ -963,6 +960,8 @@ section[id] {
 }
 
 .proof-stats {
+  width: min(1180px, calc(100% - 36px));
+  margin: 24px auto 0;
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 12px;
@@ -1261,7 +1260,7 @@ section[id] {
   .specials-copy h2,
   .visit-copy h2,
   .proof-section .section-heading h2 {
-    font-size: 3.9rem;
+    font-size: 4.08rem;
   }
 
   .compact h2 {
@@ -1344,6 +1343,7 @@ section[id] {
   .specials-shell,
   .visit-grid,
   .proof-inner,
+  .proof-stats,
   .photo-wall,
   .visit-art,
   .section-kicker {
@@ -1365,7 +1365,7 @@ section[id] {
   }
 
   h1 {
-    font-size: 4.12rem;
+    font-size: 4.36rem;
   }
 
   .hero-lede {
@@ -1429,7 +1429,7 @@ section[id] {
   .specials-copy h2,
   .visit-copy h2,
   .proof-section .section-heading h2 {
-    font-size: 3.08rem;
+    font-size: 3.28rem;
   }
 
   .compact h2 {
@@ -1513,7 +1513,7 @@ section[id] {
   }
 
   .chalk-card h3 {
-    font-size: 2.55rem;
+    font-size: 2.2rem;
   }
 
   .special-tab {
@@ -1524,17 +1524,63 @@ section[id] {
     left: 12px;
     right: 12px;
     bottom: 12px;
-    grid-template-columns: 54px 1fr;
+    grid-template-columns: 48px repeat(3, minmax(0, 1fr));
+    gap: 8px;
+    padding: 10px;
   }
 
   .vibe-tile img {
-    grid-row: span 3;
+    width: 48px;
+    height: 48px;
   }
 
-  .proof-stats,
+  .vibe-tile span {
+    text-align: center;
+    font-size: 0.8rem;
+    line-height: 1.05;
+  }
+
   .photo-wall,
   .visit-art {
     grid-template-columns: 1fr;
+  }
+
+  .proof-stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+    margin-top: 18px;
+  }
+
+  .proof-stat {
+    min-height: auto;
+    display: grid;
+    grid-template-columns: 38px minmax(0, 1fr);
+    grid-template-rows: auto auto;
+    column-gap: 8px;
+    align-items: center;
+    padding: 12px 10px;
+  }
+
+  .proof-stat span {
+    grid-row: 1 / span 2;
+    width: 34px;
+    height: 34px;
+  }
+
+  .proof-stat svg {
+    width: 17px;
+    height: 17px;
+  }
+
+  .proof-stat strong {
+    margin-top: 0;
+    font-size: 2.08rem;
+  }
+
+  .proof-stat p {
+    margin-top: 1px;
+    font-size: 0.72rem;
+    line-height: 1.08;
   }
 
   .visit-art img,
@@ -1596,6 +1642,7 @@ section[id] {
   .specials-shell,
   .visit-grid,
   .proof-inner,
+  .proof-stats,
   .photo-wall,
   .visit-art,
   .section-kicker {
@@ -1603,7 +1650,7 @@ section[id] {
   }
 
   h1 {
-    font-size: 3.76rem;
+    font-size: 3.95rem;
   }
 
   .hero-lede {
@@ -1622,7 +1669,7 @@ section[id] {
   .specials-copy h2,
   .visit-copy h2,
   .proof-section .section-heading h2 {
-    font-size: 2.78rem;
+    font-size: 2.98rem;
   }
 
   .compact h2 {
@@ -1649,6 +1696,22 @@ section[id] {
 
   .menu-category {
     padding: 14px;
+  }
+
+  .chalk-card h3 {
+    font-size: 2.02rem;
+  }
+
+  .vibe-tile {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .vibe-tile img {
+    display: none;
+  }
+
+  .proof-stat {
+    padding: 11px 8px;
   }
 }
 

@@ -378,10 +378,6 @@ function App() {
               cheese energy.
             </p>
           </div>
-          <div className="proof-stats" aria-label="Restaurant proof points">
-            <ProofStat icon={<Star />} label="4.8" text="Guest rating" />
-            <ProofStat icon={<MenuIcon />} label="200+" text="Guest reviews" />
-          </div>
         </div>
         <div className="photo-wall" aria-label="Real Taco Bros food gallery">
           {galleryPhotos.map((photo) => (
@@ -389,6 +385,10 @@ function App() {
               <img src={photo.src} alt={photo.alt} />
             </article>
           ))}
+        </div>
+        <div className="proof-stats" aria-label="Restaurant proof points">
+          <ProofStat icon={<Star />} label="4.8" text="Guest rating" />
+          <ProofStat icon={<MenuIcon />} label="200+" text="Guest reviews" />
         </div>
       </section>
 
