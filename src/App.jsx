@@ -239,11 +239,6 @@ function App() {
                 Get directions
               </a>
             </div>
-            <div className="hero-meta" aria-label="Restaurant details">
-              <span>5515 S York Hwy</span>
-              <span>Tue-Sat 11-8</span>
-              <span>$10-20 per person</span>
-            </div>
           </div>
 
           <div className="hero-showcase" aria-label="Real Taco Bros food photos">
@@ -260,10 +255,12 @@ function App() {
 
       </section>
 
-      <section className="icon-strip" aria-label="Taco Bros favorites">
-        {iconFeatures.map((item) => (
-          <IconFeature key={item.label} {...item} />
-        ))}
+      <section className="feature-band" aria-label="Taco Bros favorites">
+        <div className="icon-strip">
+          {iconFeatures.map((item) => (
+            <IconFeature key={item.label} {...item} />
+          ))}
+        </div>
       </section>
 
       <section className="menu-section section-pad" id="menu">

@@ -371,23 +371,6 @@ h1 {
   border-color: rgba(23, 17, 13, 0.22);
 }
 
-.hero-meta {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin-top: 28px;
-  color: rgba(255, 253, 246, 0.78);
-  font-size: 0.83rem;
-  font-weight: 800;
-}
-
-.hero-meta span {
-  padding: 10px 12px;
-  border: 1px solid rgba(255, 253, 246, 0.22);
-  border-radius: 6px;
-  background: rgba(0, 0, 0, 0.25);
-}
-
 .hero-showcase {
   position: relative;
   min-height: 560px;
@@ -438,15 +421,22 @@ h1 {
   transform: rotate(-4deg);
 }
 
-.icon-strip {
-  width: min(1180px, calc(100% - 36px));
-  margin: -36px auto 0;
+.feature-band {
   position: relative;
   z-index: 5;
+  margin-top: -36px;
+  padding-bottom: 32px;
+  background: var(--black);
+}
+
+.icon-strip {
+  width: min(1180px, calc(100% - 36px));
+  margin: 0 auto;
+  position: relative;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 12px;
-  padding: 0 0 32px;
+  padding: 0;
 }
 
 .icon-feature {
@@ -1234,9 +1224,12 @@ section[id] {
     transform: none;
   }
 
+  .feature-band {
+    margin-top: -24px;
+  }
+
   .icon-strip {
     grid-template-columns: repeat(2, 1fr);
-    margin-top: -24px;
   }
 
   .menu-board,
@@ -1352,10 +1345,13 @@ section[id] {
     height: 260px;
   }
 
-  .icon-strip {
-    grid-template-columns: 1fr;
+  .feature-band {
     margin-top: -14px;
     padding-bottom: 30px;
+  }
+
+  .icon-strip {
+    grid-template-columns: 1fr;
   }
 
   .section-pad {
